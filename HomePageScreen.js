@@ -101,11 +101,11 @@ const HomePageScreen = ()=>{
 
             <View style={Styles.airtime}>
                 <Text style={{color: '#D8D8D8' , fontWeight: '400', fontSize: 12 }}>Airtime Balance</Text>
-                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 15}}>₦250.00</Text>
+                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 15}}>{profile.airtimebalance}</Text>
             </View>
 
             <View style={Styles.btnbox1}>
-                <TouchableOpacity style={{padding: 10, backgroundColor: '#29292B', marginTop: 5, borderRadius: 7}}>
+                <TouchableOpacity style={{padding: 10, backgroundColor: '#29292B', marginTop: 5, borderRadius: 7}} onPress={()=> navigation.navigate('Buy Airtime')}>
                     <Text style={{color: '#61BF5A', textAlign: 'center', fontWeight: 'bold'}}>Recharge</Text>
                 </TouchableOpacity>
             </View>
@@ -124,7 +124,7 @@ const HomePageScreen = ()=>{
 
             <View style={{width: 117, height: 50, marginRight: 162, marginTop: 10}}>
                 <Text style={{color: '#D8D8D8', fontSize: 10}}>Data Balance</Text>
-                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 16 }}>100.02GB</Text>
+                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 16 }}>{profile.databalance}</Text>
                 <MaterialIcons name="keyboard-arrow-right" size={24} color="#61BF5A" style={{position: 'absolute', left: 85, top: 4}} />
             </View>
             

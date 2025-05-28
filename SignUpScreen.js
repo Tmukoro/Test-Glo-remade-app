@@ -7,6 +7,7 @@ import { Snackbar } from "react-native-paper";
 
 
 
+
 const SignUpScreen = ({navigation}) =>{
 
     const [email, setEmail] = useState('');
@@ -16,7 +17,12 @@ const SignUpScreen = ({navigation}) =>{
 
     const signup = async()=>{
         try{
-            await firebase.auth().createUserWithEmailAndPassword(email,password);
+           const userCredentials =  await firebase.auth().createUserWithEmailAndPassword(email,password);
+           const user = userCredentials;
+            
+           await firebase.firestore
+
+
             setSnackbarMessage("Sign up Successfull!");
             setSnackbarVisible(true);
             Keyboard.dismiss();

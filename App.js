@@ -18,6 +18,7 @@ import NotificationScreen from './NotificationScreen';
 import HelpSupportScreen from './HelpSupportScreen';
 import SettingScreen from './SettingScreen';
 import ProfileinfoScreen from './ProfileInfoScreen';
+import AritePurchaseScreen from './AirtimePurchaseScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -55,6 +56,7 @@ export default function App() {
               <Stack.Screen name='Account Info' component={ProfileinfoScreen} 
               options={{headerStyle:{backgroundColor: '#409439'}, headerTitleStyle: {fontWeight: 'bold', color: 'white'}, headerTintColor: 'white'}}
               ></Stack.Screen>
+              <Stack.Screen name='Buy Airtime' component={AritePurchaseScreen} options={{headerStyle:{backgroundColor: '#409439'}, headerTitleStyle: {fontWeight: 'bold', color: 'white'}, headerTintColor: 'white'}}></Stack.Screen>
 
 
               </Stack.Navigator>

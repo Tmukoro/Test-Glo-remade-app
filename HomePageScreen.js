@@ -60,6 +60,13 @@ const HomePageScreen = ()=>{
         );
     }
 
+    const formatdata = (mb)=>{
+        if(mb >= 1000){
+            return `${(mb / 1000).toFixed(1)}GB`;
+        }
+        return  `${mb} MB`;
+    }
+
 
 
 
@@ -101,7 +108,7 @@ const HomePageScreen = ()=>{
 
             <View style={Styles.airtime}>
                 <Text style={{color: '#D8D8D8' , fontWeight: '400', fontSize: 12 }}>Airtime Balance</Text>
-                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 15}}>{profile.airtimebalance}</Text>
+                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 15}}>N{profile.airtimebalance}</Text>
             </View>
 
             <View style={Styles.btnbox1}>
@@ -124,13 +131,13 @@ const HomePageScreen = ()=>{
 
             <View style={{width: 117, height: 50, marginRight: 162, marginTop: 10}}>
                 <Text style={{color: '#D8D8D8', fontSize: 10}}>Data Balance</Text>
-                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 16 }}>{profile.databalance}</Text>
+                <Text style={{color: 'white', fontWeight: 'bold', fontSize: 16 }}>{formatdata(profile?.databalance)}</Text>
                 <MaterialIcons name="keyboard-arrow-right" size={24} color="#61BF5A" style={{position: 'absolute', left: 85, top: 4}} />
             </View>
             
 
             <View style={{width: 117, height: 50, position: 'absolute', left: 265, top: 10}}>
-                <TouchableOpacity style={{padding: 10, backgroundColor: '#29292B', marginTop: 5, borderRadius: 7}}>
+                <TouchableOpacity style={{padding: 10, backgroundColor: '#29292B', marginTop: 5, borderRadius: 7}} onPress={()=> navigation.navigate('Buy Data')}>
                     <Text style={{color: '#61BF5A', textAlign: 'center', fontWeight: 'bold'}}>Buy Data</Text>
                 </TouchableOpacity>
             </View>
@@ -151,7 +158,7 @@ const HomePageScreen = ()=>{
 
                 <View  style={{flexDirection: 'row', height: 80, marginTop: 10}}>
 
-                <TouchableOpacity style={{borderWidth: 1, borderColor: '#29292B', width: 70, height: 70, borderRadius: 8, backgroundColor: '#1F1F21', marginLeft: 15}}>
+                <TouchableOpacity onPress={()=>{navigation.navigate('History')}}  style={{borderWidth: 1, borderColor: '#29292B', width: 70, height: 70, borderRadius: 8, backgroundColor: '#1F1F21', marginLeft: 15}}>
                     <Image source={RCICON} style={{alignSelf: 'center', marginTop: 11, width: 25}}></Image>
                     <Text style={{color: 'white', textAlign: 'center', fontSize: 12, marginTop: 5}}>History</Text>
                 </TouchableOpacity>

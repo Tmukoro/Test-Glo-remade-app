@@ -19,6 +19,8 @@ import HelpSupportScreen from './HelpSupportScreen';
 import SettingScreen from './SettingScreen';
 import ProfileinfoScreen from './ProfileInfoScreen';
 import AritePurchaseScreen from './AirtimePurchaseScreen';
+import DataPurchaseScreen from './DataPurchaseScreen';
+import HistoryScreen from './HistoryScreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -57,7 +59,8 @@ export default function App() {
               options={{headerStyle:{backgroundColor: '#409439'}, headerTitleStyle: {fontWeight: 'bold', color: 'white'}, headerTintColor: 'white'}}
               ></Stack.Screen>
               <Stack.Screen name='Buy Airtime' component={AritePurchaseScreen} options={{headerStyle:{backgroundColor: '#409439'}, headerTitleStyle: {fontWeight: 'bold', color: 'white'}, headerTintColor: 'white'}}></Stack.Screen>
-
+              <Stack.Screen name='Buy Data' component={DataPurchaseScreen} options={{headerStyle:{backgroundColor: '#409439'}, headerTitleStyle: {fontWeight: 'bold', color: 'white'}, headerTintColor: 'white'}}></Stack.Screen>
+              <Stack.Screen name='History' component={HistoryScreen} options={{headerStyle: {backgroundColor: '#409439'}, headerTintColor: 'white', headerTitleStyle: {fontWeight: 'bold', color: 'white'}}}></Stack.Screen>
 
               </Stack.Navigator>
 

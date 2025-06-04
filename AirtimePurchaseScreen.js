@@ -2,7 +2,7 @@ import React, {useState, useEffect} from "react";
 import { firebase } from "./firebaseConfig";
 import { Text, View, TextInput, TouchableOpacity, StyleSheet, Keyboard } from "react-native";
 import { Snackbar } from "react-native-paper";
-import { useNavigation } from "@react-navigation/native";
+
 
 const AritePurchaseScreen = ({navigation})=>{
     const [amount, setAmount] = useState('');

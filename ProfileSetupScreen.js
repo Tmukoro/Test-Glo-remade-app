@@ -55,7 +55,7 @@ const ProfileSetupScreen = ({navigation, route}) =>{
                 email,
                 image,
                 airtimebalance: 0.00,
-                databalance: 0.00
+                databalance: 0.00,
             });
 
             console.log("Profile Saved!")

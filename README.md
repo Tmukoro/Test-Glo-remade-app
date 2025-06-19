@@ -22,4 +22,6 @@ It’s not meant to be a production-level application but rather a training grou
   <li>History Tracking for all purchases made</li>
 </ul>
 
+<br>
+
 <p>This app is a work-in-progress and will be revisited frequently for polish and upgrades as I grow my understanding of React Native and mobile app development in general</p>

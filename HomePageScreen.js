@@ -54,8 +54,8 @@ const HomePageScreen = ()=>{
 
     if(!profile){
         return(
-            <View>
-                <Text>Loading...</Text>
+            <View style={{backgroundColor: 'black', alignContent: 'center'}}>
+                <Text style={{textAlign: 'center', color: 'white'}}>Loading...</Text>
             </View>
         );
     }

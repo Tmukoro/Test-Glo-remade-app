@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 import { Provider as PaperProvider } from 'react-native-paper';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import { setBackgroundColorAsync } from 'expo-system-ui';
 import * as NavigationBar from 'expo-navigation-bar'
 import { Platform } from 'react-native';
@@ -40,7 +41,10 @@ export default function App() {
   return (
 
 
-          <PaperProvider>
+       
+   
+         <GestureHandlerRootView>
+            <PaperProvider>
 
             <NavigationContainer>
 
@@ -67,7 +71,7 @@ export default function App() {
             </NavigationContainer>
             
           </PaperProvider>
-
+         </GestureHandlerRootView>
 
  
   );

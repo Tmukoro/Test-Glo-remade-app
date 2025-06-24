@@ -29,7 +29,7 @@ const HistoryScreen = ()=>{
 
     const renderItem = ({item}) =>{
         return (
-        <View style={{marginBottom: 18}}>
+        <View style={{marginBottom: 18, borderWidth: 1, borderColor: 'white', width: '100%', borderRadius: 4, backgroundColor: 'green', padding: 4}}>
             <Text style={{color: 'white'}}>{item.type} Purchase</Text>
             <Text style={{color: 'white'}}>{item.amount} {item.unit}</Text>
             <Text style={{color: 'white'}}>Date: {formatDate(item.timestamp)}</Text>

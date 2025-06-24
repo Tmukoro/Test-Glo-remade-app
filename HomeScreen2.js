@@ -15,7 +15,7 @@ import SettingScreen from "./SettingScreen";
 
 const Tab = createBottomTabNavigator();
 
-export default function HomeScreen2(){
+export default function HomeScreen2 (){
 
     useEffect(()=>{
         if(Platform.OS === 'android'){
@@ -44,7 +44,7 @@ export default function HomeScreen2(){
                 return <Ionicons name={iconfig} color={color} size={size}></Ionicons>
             },
 
-            tabBarStyle: {backgroundColor: '#1F1F21'},
+            tabBarStyle: {backgroundColor: '#1F1F21', borderColor: '#1F1F21'},
             tabBarInactiveTintColor: 'grey',
             tabBarActiveTintColor: '#61BF5A',
         })}>

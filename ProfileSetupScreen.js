@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from "react";
-import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image } from "react-native";
+import { View, Text, StyleSheet, TextInput, TouchableOpacity, Image, Keyboard } from "react-native";
 import { firebase } from "./firebaseConfig";
 import* as ImagePicker from "expo-image-picker";
+import { Snackbar } from "react-native-paper";
 
 
 
@@ -13,6 +14,8 @@ const ProfileSetupScreen = ({navigation, route}) =>{
     const [phoneno, setPhoneno] = useState('');
     const [image, setImage] = useState(null);
     const [uid, setUid] = useState('');
+    const [snackbarMessage, setSnackbarMessage] = useState('');
+    const [snackbarVisible, setSnackbarVisible] = useState('');
 
 
     useEffect(()=>{
@@ -47,6 +50,9 @@ const ProfileSetupScreen = ({navigation, route}) =>{
     };
 
     const saveProfile = async()=>{
+        
+
+
         try{
             await firebase.firestore().collection('Profiles').doc(uid).set({
                 username,
@@ -93,6 +99,9 @@ const ProfileSetupScreen = ({navigation, route}) =>{
             <TouchableOpacity onPress={saveProfile} style={Styles.button}>
                 <Text style={Styles.btntxt}>Save Profile</Text>
             </TouchableOpacity>
+
+
+            <Snackbar visible={snackbarVisible} onDismiss={()=>{snackbarVisible(false)}} duration={1500}>{snackbarMessage}</Snackbar>
 
         </View>
     );
